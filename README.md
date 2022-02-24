@@ -16,6 +16,14 @@ $ ls
 ```
 conda env create -f py38-gis.yml
 ```
+2. If the yml does not work, try to manually create env and install libs:
+```
+conda create --name py38-gis python=3.8
+conda install -c conda-forge jupyterlab geopandas matplotlib ipyleaflet
+pip3 install glob2
+pip uninstal rtree
+conda install -c conda-forge rtree=0.9.3
+```
 3. Activate environment and open Jupyter Lab: 
 ```
 conda activate py38-gis
