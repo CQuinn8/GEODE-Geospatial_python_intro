@@ -12,11 +12,13 @@ Check contents
 $ cd GEODE-Geospatial_python_intro
 $ ls
 ```
-2. Use the provided py38-gis.yml environment setup file to install the required libraries:
+2a. Use the provided py38-gis.yml environment setup file to install the required libraries:
 ```
 conda env create -f py38-gis.yml
+pip uninstal rtree
+conda install -c conda-forge rtree=0.9.3
 ```
-2. If the yml does not work, try to manually create env and install libs:
+2b. If the yml does not work, try to manually create env and install libs:
 ```
 conda create --name py38-gis python=3.8
 conda install -c conda-forge jupyterlab geopandas matplotlib ipyleaflet
